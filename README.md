@@ -1,1 +1,1 @@
-# CreditCalculator
+A form for checking creditworthiness
