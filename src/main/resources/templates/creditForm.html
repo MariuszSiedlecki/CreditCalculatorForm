@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>TemplatesForm</title>
+</head>
+<body>
+        <div style="text-align: center;">
+            <h1>Formularz Kredytowy</h1>
+
+            <h1 th:if="${getCredit!=null}"
+                th:text="${getCredit ? 'Posiadasz zdolność kredytową ' : 'Nie masz zdolności kredytowej '}"
+                th:style="${'color:'+(getCredit ? 'green' : 'red')}">
+
+            </h1>
+
+            <form th:if="${getCredit==null}"action="/form" method="post"
+                  th:object="${creditObject}">
+                <input type="number" th:field="*{salary}" placeholder="Salary"><br/>
+                <input type="number" th:field="*{costs}" placeholder="Costs"><br/>
+                <input type="number" th:field="*{creditAmount}" placeholder="Credit amount"><br/>
+                <input type="number" th:field="*{loanPeriod}"placeholder="Loan period"><br/>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+</body>
+</html>
