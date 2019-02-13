@@ -1,1 +1,1 @@
-A form for checking creditworthiness
+A form for checking creditworthiness.
