@@ -19,6 +19,7 @@
 pom.xml
 mvnw.cmd
 mvnw
+.mvn
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
